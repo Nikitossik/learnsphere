@@ -1,0 +1,36 @@
+@import "font.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-medium text-black;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+    @apply mx-auto px-8 md:max-w-[51rem] lg:max-w-none xl:max-w-[79rem];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+}
