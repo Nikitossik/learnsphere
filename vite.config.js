@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/learnsphere",
+  base: "/learnsphere/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
