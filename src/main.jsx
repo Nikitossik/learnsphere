@@ -21,24 +21,24 @@ const router = createBrowserRouter([
       // errorElement: <ErrorPage />,
       { index: true, element: <Home /> },
       {
-        path: "/learnsphere/sign-up",
+        path: "sign-up",
         element: <SignUp />,
       },
       {
-        path: "/learnsphere/sign-in",
+        path: "sign-in",
         element: <SignIn />,
       },
 
       {
-        path: "/learnsphere/profile/student",
+        path: "profile/student",
         element: <Profile />,
       },
       {
-        path: "/learnsphere/profile/teacher",
+        path: "profile/teacher",
         element: <Profile />,
       },
       {
-        path: "/learnsphere/course",
+        path: "course",
         element: <Course />,
       },
     ],
