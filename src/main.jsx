@@ -12,7 +12,7 @@ import Course from "./pages/Course/Course";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/learnsphere/",
     element: <Layout />,
     // errorElement: <ErrorPage />,
     // loader: rootLoader,
@@ -21,24 +21,24 @@ const router = createBrowserRouter([
       // errorElement: <ErrorPage />,
       { index: true, element: <Home /> },
       {
-        path: "sign-up",
+        path: "/learnsphere/sign-up",
         element: <SignUp />,
       },
       {
-        path: "sign-in",
+        path: "/learnsphere/sign-in",
         element: <SignIn />,
       },
 
       {
-        path: "profile/student",
+        path: "/learnsphere/profile/student",
         element: <Profile />,
       },
       {
-        path: "profile/teacher",
+        path: "/learnsphere/profile/teacher",
         element: <Profile />,
       },
       {
-        path: "course",
+        path: "/learnsphere/course",
         element: <Course />,
       },
     ],
