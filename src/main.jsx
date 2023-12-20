@@ -19,26 +19,30 @@ const router = createBrowserRouter([
     // action: rootAction,
     children: [
       // errorElement: <ErrorPage />,
-      { index: true, element: <Home /> },
+      // { index: true, element: <Home /> },
       {
-        path: "sign-up",
+        path: "/learnsphere/",
+        element: <Home />,
+      },
+      {
+        path: "/learnsphere/sign-up",
         element: <SignUp />,
       },
       {
-        path: "sign-in",
+        path: "/learnsphere/sign-in",
         element: <SignIn />,
       },
 
       {
-        path: "profile/student",
+        path: "/learnsphere/profile/student",
         element: <Profile />,
       },
       {
-        path: "profile/teacher",
+        path: "/learnsphere/profile/teacher",
         element: <Profile />,
       },
       {
-        path: "course",
+        path: "/learnsphere/course",
         element: <Course />,
       },
     ],
