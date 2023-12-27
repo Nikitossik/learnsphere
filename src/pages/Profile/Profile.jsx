@@ -7,19 +7,25 @@ import { useLocation } from "react-router";
 import studentProfile from "./images/student-profile-image.jpg";
 import teacherProfile from "./images/teacher-profile-image.jpg";
 
+import { UserProvider } from "@/hoc/UserContext";
+
 const studentInfo = {
   imagePath: studentProfile,
-  name: "Julia Fharat",
+  firstName: "Julia",
+  lastName: "Fharat",
   age: "18",
   email: "juliafharat@gmail.com",
+  password: "0123456789",
   phone: "+1 234 567 890",
 };
 
 const teacherInfo = {
   imagePath: teacherProfile,
-  name: "Adam Hujir",
+  firstName: "Adam",
+  lastName: "Hujir",
   age: "26",
   email: "adamhujir@gmail.com",
+  password: "0123456789",
   phone: "+1 234 567 890",
 };
 
@@ -27,24 +33,25 @@ const Profile = () => {
   const { pathname } = useLocation();
 
   const isStudent = pathname.includes("student");
-  console.log(isStudent);
 
   return (
-    <main className="flex-auto">
-      <div className="container pt-10 lg:pt-20">
-        <div className="flex gap-x-8">
-          <div className="flex-auto">
-            {isStudent ? <StudentBoard /> : <TeacherBoard />}
-          </div>
-          <div className="basis-[23.75rem] shrink-0">
-            <h1 className="text-black text-4xl lg:text-3xl leading-tight font-bold mb-5">
-              My profile
-            </h1>
-            <ProfileCard info={isStudent ? studentInfo : teacherInfo} />
+    <UserProvider value={isStudent ? studentInfo : teacherInfo}>
+      <main className="flex-auto">
+        <div className="container pt-10 lg:pt-20">
+          <div className="flex flex-col sm:flex-row gap-8">
+            <div className="basis-1/3 shrink-0 sm:order-2">
+              <h1 className="text-black text-4xl lg:text-3xl font-bold mb-5">
+                My profile
+              </h1>
+              <ProfileCard />
+            </div>
+            <div className="flex-auto order-1">
+              {isStudent ? <StudentBoard /> : <TeacherBoard />}
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </UserProvider>
   );
 };
 

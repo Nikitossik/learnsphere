@@ -11,7 +11,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import google from "../../assets/icons/google.svg";
+import google from "@/assets/icons/google.svg";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

@@ -5,8 +5,8 @@ import NavigationDropdown from "./NavigationDropdown";
 
 const Navigation = () => {
   return (
-    <header className=" w-full pt-10 lg:pt-[50px]">
-      <div className="container flex justify-between space-x-4">
+    <header className="w-full pt-10 lg:pt-[50px]">
+      <div className="container flex justify-between items-center space-x-4">
         <a
           href="#"
           className="text-base-sm font-bold uppercase tracking-wide leading-tight"

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import SignUp from "./pages/SignUp/SignUp";
@@ -12,7 +13,8 @@ import Course from "./pages/Course/Course";
 
 const router = createBrowserRouter([
   {
-    path: "/learnsphere/",
+    // path: "/learnsphere/",
+    path: "/",
     element: <Layout />,
     // errorElement: <ErrorPage />,
     // loader: rootLoader,
@@ -21,24 +23,24 @@ const router = createBrowserRouter([
       // errorElement: <ErrorPage />,
       { index: true, element: <Home /> },
       {
-        path: "/learnsphere/sign-up",
+        path: "register",
         element: <SignUp />,
       },
       {
-        path: "/learnsphere/sign-in",
+        path: "login",
         element: <SignIn />,
       },
 
       {
-        path: "/learnsphere/profile/student",
+        path: "profile/student",
         element: <Profile />,
       },
       {
-        path: "/learnsphere/profile/teacher",
+        path: "profile/teacher",
         element: <Profile />,
       },
       {
-        path: "/learnsphere/course",
+        path: "course",
         element: <Course />,
       },
     ],
