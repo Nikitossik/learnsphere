@@ -13,8 +13,8 @@ import Course from "./pages/Course/Course";
 
 const router = createBrowserRouter([
   {
-    // path: "/learnsphere/",
-    path: "/",
+    path: "/learnsphere/",
+    //path: "/",
     element: <Layout />,
     // errorElement: <ErrorPage />,
     // loader: rootLoader,
